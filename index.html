@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація/Увійти</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="welcome-section">
+            <h1>Ласкаво просимо!</h1>
+            <p>Увійдіть до свого облікового запису або зареєструйтеся, щоб отримати доступ до всіх можливостей нашого сервісу.</p>
+            <div class="logo">
+                <i class="fas fa-rocket fa-3x"></i>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <div id="login-form" class="form-container active-form">
+                <h2 class="form-title">Увійти в акаунт</h2>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="Ваш Email" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="Пароль" required>
+                </div>
+                
+                <button class="btn primary-btn" onclick="login()">Увійти</button>
+                <button class="btn secondary-btn" onclick="switchToRegister()">Зареєструватися</button>
+                
+                <div class="switch-text">
+                    <p>Забули пароль? <a href="#">Відновити</a></p>
+                </div>
+            </div>
+            
+            <div id="register-form" class="form-container">
+                <h2 class="form-title">Створити акаунт</h2>
+                
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="register-name" placeholder="Ваше Ім'я" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="register-email" placeholder="Ваш Email" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="register-password" placeholder="Пароль" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-check-circle"></i>
+                    <input type="password" id="register-confirm" placeholder="Підтвердіть пароль" required>
+                </div>
+                
+                <button class="btn primary-btn" onclick="register()">Зареєструватися</button>
+                <button class="btn secondary-btn" onclick="switchToLogin()">Вже маю акаунт</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
